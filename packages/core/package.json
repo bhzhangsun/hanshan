@@ -1,0 +1,13 @@
+{
+  "name": "@hanshan/core",
+  "version": "1.0.0",
+  "description": "hanshan frontend lowcode platform core library",
+  "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.73.0"
+  },
+  "scripts": {
+    "build": "rollup index.js"
+  }
+}

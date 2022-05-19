@@ -1,0 +1,13 @@
+{
+  "name": "hanshan",
+  "repository": "https://github.com/zsbh/hanshan.git",
+  "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
