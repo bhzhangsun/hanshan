@@ -1,13 +1,34 @@
 {
-  "name": "@hanshan/core",
-  "version": "1.0.0",
-  "description": "hanshan frontend lowcode platform core library",
+  "name": "hanshan",
+  "version": "0.0.1",
+  "description": "lowcode infra",
+  "keywords": [
+    "lowcode"
+  ],
   "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
+  "homepage": "https://github.com/zsbh/hanshan#readme",
   "license": "MIT",
-  "devDependencies": {
-    "rollup": "^2.73.0"
+  "main": "dis/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://ued.zuoyebang.cc/npm/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsbh/hanshan.git"
   },
   "scripts": {
-    "build": "rollup index.js"
-  }
+    "lint": "cd ../../ && yarn run lint",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/zsbh/hanshan/issues"
+  },
+  "dependencies": {}
 }

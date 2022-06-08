@@ -1,7 +1,0 @@
-{
-    "type": "page",
-    "data": {
-      "text": "World"
-    },
-    "body": "Hello ${text}!"
-  }

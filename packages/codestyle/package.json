@@ -1,0 +1,31 @@
+{
+  "name": "@hanshan/codestyle",
+  "version": "0.0.1",
+  "description": "codestyle lint script",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsbh/hanshan.git"
+  },
+  "publishConfig": {
+    "registry": "http://ued.zuoyebang.cc/npm/"
+  },
+  "scripts": {
+    "lint": "cd ../../ && yarn run lint"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.1.0"
+  },
+  "exports": {
+    "./*": "./src/*.js"
+  }
+}
