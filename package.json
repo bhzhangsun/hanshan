@@ -1,5 +1,5 @@
 {
-  "name": "hanshan_",
+  "name": "hanshan",
   "repository": "https://github.com/zsbh/hanshan.git",
   "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
   "license": "MIT",
@@ -8,15 +8,18 @@
   ],
   "private": true,
   "scripts": {
-    "lint": "eslint \"packages/**/{src,__test__}/**/*.{js,jsx,vue,ts,tsx,json}\" --fix"
+    "lint": "eslint \"packages/**/{src,__test__}/**/*.{js,jsx,vue,ts,tsx,json}\" --fix",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/cz-commitlint": "^17.0.0",
     "@typescript-eslint/parser": "^5.27.1",
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.17.0",
     "eslint-plugin-jest": "^26.5.3",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "jest": "^28.1.1",
     "lerna": "^4.0.0",
     "lint-staged": "^13.0.1",
@@ -24,17 +27,20 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx,json}": "yarn run lint"
+    "*.{js,jsx,vue,ts,tsx,json}": [
+      "yarn run lint",
+      "git add *"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "@commitlint/cz-commitlint"
     }
   }
 }

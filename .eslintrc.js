@@ -30,7 +30,7 @@ module.exports = {
   overrides: [
     // global config file
     {
-      files: ['.eslintrc.js', 'packages/codestyle/**'],
+      files: ['.*.js', 'packages/codestyle/**'],
       rules: {
         'no-restricted-globals': 'off'
       }

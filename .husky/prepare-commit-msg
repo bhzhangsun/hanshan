@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 判断是否已经添加 message, 未添加使用git-cz
+if [ ! $2 ] 
+then
+    exec < /dev/tty && node_modules/.bin/git-cz --hook
+fi
