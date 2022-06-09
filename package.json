@@ -31,5 +31,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx,json}": "yarn run lint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
