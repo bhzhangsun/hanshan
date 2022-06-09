@@ -8,13 +8,13 @@
   "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
   "homepage": "https://github.com/zsbh/hanshan#readme",
   "license": "MIT",
-  "main": "dis/index.js",
+  "main": "dist/index.js",
   "directories": {
-    "lib": "lib",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "src"
   ],
   "publishConfig": {
     "registry": "http://ued.zuoyebang.cc/npm/"
