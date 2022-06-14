@@ -11,6 +11,7 @@ class Factory {
     this._internel[type] = comp;
     return true;
   }
+
   public get(type: string): Component | null {
     const comp = this._internel[type];
     if (!comp) {

@@ -11,6 +11,7 @@ export interface ActionSchema {
   body?: CommonSchemaType;
   redirect: string;
 }
+
 export interface CommonSchema {
   type: string;
   props: any;

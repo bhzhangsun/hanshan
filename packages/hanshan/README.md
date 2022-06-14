@@ -1,11 +1,11 @@
-# `@hanshan/core`
+# `hanshan`
 
 > TODO: description
 
 ## Usage
 
 ```
-const core = require('@hanshan/core');
+const hanshan = require('hanshan');
 
 // TODO: DEMONSTRATE API
 ```

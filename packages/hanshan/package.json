@@ -1,11 +1,11 @@
 {
-  "name": "@hanshan/core",
+  "name": "hanshan",
   "version": "0.0.1",
-  "description": "lowcode",
+  "description": "lowcode infra",
   "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
   "homepage": "https://github.com/zsbh/hanshan#readme",
-  "license": "MIT",
-  "main": "lib/index.js",
+  "license": "ISC",
+  "main": "lib/hanshan.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
