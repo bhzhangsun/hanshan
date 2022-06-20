@@ -1,1 +1,1 @@
-export const Core = 'hello';
+export * from './tpl';

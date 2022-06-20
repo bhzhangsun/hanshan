@@ -10,7 +10,7 @@
   "scripts": {
     "lint": "eslint \"packages/**/{src,__test__}/**/*.{js,jsx,vue,ts,tsx,json}\" --fix",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
@@ -19,6 +19,7 @@
     "@types/jest": "^28.1.1",
     "@typescript-eslint/parser": "^5.27.1",
     "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
     "eslint": "^8.17.0",
     "eslint-plugin-jest": "^26.5.3",
     "husky": "^8.0.0",

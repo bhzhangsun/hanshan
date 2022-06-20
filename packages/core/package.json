@@ -5,7 +5,9 @@
   "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
   "homepage": "https://github.com/zsbh/hanshan#readme",
   "license": "MIT",
+  "type": "module",
   "main": "lib/index.js",
+  "module": "lib/index.esm.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -14,16 +16,29 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "http://ued.zuoyebang.cc/npm/"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zsbh/hanshan.git"
   },
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/zsbh/hanshan/issues"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "rollup": "^2.75.6",
+    "rollup-plugin-clear": "^2.0.7",
+    "typescript": "^4.7.3"
   }
 }

@@ -1,7 +1,8 @@
-import { Core } from '../src/index';
+import { execute } from '../src/index';
 
 describe('@hanshan/core', () => {
-  it('Core', () => {
-    console.log('hello Core', Core);
+  it('template', () => {
+    const expr = '';
+    expect(execute(expr)).toEqual(3);
   });
 });
