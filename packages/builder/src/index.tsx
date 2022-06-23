@@ -1,4 +1,4 @@
-import { Component, computed, ref } from 'vue';
+import { Component } from 'vue';
 import { factory } from './factory';
 import { useExpression, useStates } from './states';
 
@@ -35,7 +35,7 @@ function _createComponent(config: CommonSchemaType): ComponentType | null {
   if (!config.type) return null;
   const comp = factory.get(config.type);
   if (!comp) return null;
-  const showExpr = useExpression(config.show);
+  const showExpr = useExpression(config.show as string);
   if (!showExpr()) return null;
   // 生成子节点
   let children: any = null;
@@ -43,6 +43,7 @@ function _createComponent(config: CommonSchemaType): ComponentType | null {
     children = _createComponent(config.body);
     if (children instanceof Array && config.space) {
       const space = factory.get('space');
+      console.log('space:', space);
       const props = config.space === true ? {} : config.space;
       children = <space {...props}>{children}</space>;
     }
@@ -55,7 +56,7 @@ function _createComponent(config: CommonSchemaType): ComponentType | null {
     <comp
       {...config.props}
       {...{ key: config?.key, value: state }}
-      onInput={e => {
+      onInput={(e: any) => {
         setState(e.target.value);
       }}
     >

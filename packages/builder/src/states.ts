@@ -61,7 +61,7 @@ export function useStates(name: string, initValue?: any, cover?: boolean) {
   return [_states.get(name), (value: any) => _states.set(name, value)];
 }
 
-export function useExpression(express?: string): () => any {
-  if (express === undefined) return () => true;
-  return express ? _states.parse(express) : () => false;
+export function useExpression(express: string): () => any {
+  const exec = _states.parse(express);
+  return exec();
 }

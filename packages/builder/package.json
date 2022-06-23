@@ -1,7 +1,7 @@
 {
-  "name": "@hanshan/core",
+  "name": "@hanshan/builder",
   "version": "0.0.1",
-  "description": "lowcode",
+  "description": "builder api",
   "author": "zhangsunbaohong <zhangsunbaohong@zuoyebang.com>",
   "homepage": "https://github.com/zsbh/hanshan#readme",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "http://ued.zuoyebang.cc/npm/"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "url": "https://github.com/zsbh/hanshan/issues"
   },
   "dependencies": {
+    "element-plus": "^2.2.6",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -36,6 +37,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
     "rollup": "^2.75.6",
     "rollup-plugin-clear": "^2.0.7",
     "typescript": "^4.7.3"

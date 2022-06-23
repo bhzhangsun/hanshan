@@ -2,18 +2,20 @@
 module.exports = {
   extensionsToTreatAsEsm: ['.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js'],
-  testEnvironment: 'node',
-  projects: ['packages/*'],
+  testEnvironment: 'jsdom',
+
+  // projects: ['packages/*'], // monorepo 配置 会使用projects下的jest.config.js
   //  把ts 结尾的文件转换成 js  文件
-  transform: {
-    '.(ts|tsx)': '<rootDir>/node_modules/ts-jest/preprocessor.js'
-  },
+  preset: 'ts-jest',
+  // transform: {
+  //   '.(ts|tsx)': '<rootDir>/node_modules/ts-jest/preprocessor.js'
+  // }
   globals: {
     'ts-jest': {
       useESM: true
     }
-  },
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
   }
+  // moduleNameMapper: {
+  //   '^(\\.{1,2}/.*)\\.js$': '$1'
+  // }
 };
