@@ -11,7 +11,6 @@ class Factory {
     this._internel[type] = comp;
     return true;
   }
-
   public get(type: string): Component | null {
     const comp = this._internel[type];
     if (!comp) {
@@ -66,8 +65,8 @@ _factory.register('form-item', ElForm.Item);
 _factory.register('button', props => <ElButton {...props}>{props.label}</ElButton>);
 
 _factory.register('table', ElTable);
-_factory.register('table-column', ElTable.Column);
-_factory.register('table-column-group', ElTable.ColumnGroup);
+_factory.register('table-column', ElTable.ElColumn);
+_factory.register('table-column-group', ElTable.ElColumnGroup);
 
 _factory.register('row', ElRow);
 _factory.register('col', ElCol);

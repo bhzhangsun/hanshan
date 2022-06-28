@@ -5,8 +5,26 @@ describe('@hanshan/core', () => {
     expect(execute('false')).toEqual(false);
     expect(execute('window')).toBeFalsy();
     expect(execute('global')).toBeTruthy();
-    expect(execute('${foo.text}', { foo: { text: 'hello world' } })).toEqual('hello world');
-    expect(execute('${ foo.text }', { foo: { text: 'hello world' } })).toEqual('hello world');
-    expect(execute('${ foo.text }', { foo: { text: 'hello world' } })).toEqual('hello world');
+    expect(
+      execute('${foo.text}', {
+        foo: {
+          text: 'hello world'
+        }
+      })
+    ).toEqual('hello world');
+    expect(
+      execute('${ foo.text }', {
+        foo: {
+          text: 'hello world'
+        }
+      })
+    ).toEqual('hello world');
+    expect(
+      execute('${ foo.text }', {
+        foo: {
+          text: 'hello world'
+        }
+      })
+    ).toEqual('hello world');
   });
 });

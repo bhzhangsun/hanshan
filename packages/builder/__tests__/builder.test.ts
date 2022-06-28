@@ -1,4 +1,4 @@
-import builder from '../src';
+import { builder } from '../src';
 
 describe('@hanshan/builder', () => {
   test('needs tests', () => {

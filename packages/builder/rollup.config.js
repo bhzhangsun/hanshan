@@ -1,32 +1,31 @@
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
-import typescript from '@rollup/plugin-typescript';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import typescript from 'rollup-plugin-typescript2'; // 编译耗时30s
+// import typescript from '@rollup/plugin-typescript'; // 编译耗时60s
+import babel from '@rollup/plugin-babel';
 import clear from 'rollup-plugin-clear';
-import path from 'path';
 import { main, module } from './package.json';
 
-const typescriptOption = {
-  sourceMap: false,
-  outputToFilesystem: true,
-  compilerOptions: {
-    rootDir: './src',
-    outDir: path.dirname(module)
-  }
-};
-
 export default {
-  input: 'src/index.tsx',
-  plugins: [clear({ targets: ['./lib'] }), json(), vueJsx(), resolve(), typescript(typescriptOption), commonjs()],
+  input: 'src/index.ts',
+  plugins: [
+    clear({ targets: ['./lib'] }),
+    resolve(),
+    commonjs(),
+    json(),
+    typescript(),
+    babel({ babelHelpers: 'bundled', extensions: ['ts', '.tsx'] })
+  ],
   output: [
     {
       format: 'esm',
       file: module
     },
     {
-      format: 'cjs',
-      file: main
+      format: 'umd',
+      file: main,
+      name: '$builder'
     }
   ]
 };

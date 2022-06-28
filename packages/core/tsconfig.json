@@ -4,5 +4,5 @@
     "rootDir": "./",
     "typeRoots": ["../../types", "./node_modules/@types", "../../node_modules/@types"]
   },
-  "include": ["src/**/*", "../builder/src/action.ts"]
+  "include": ["src/**/*"]
 }

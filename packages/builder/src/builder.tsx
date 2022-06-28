@@ -11,7 +11,6 @@ export interface ActionSchema {
   body?: CommonSchemaType;
   redirect: string;
 }
-
 export interface CommonSchema {
   type: string;
   props: any;
@@ -43,7 +42,7 @@ function _createComponent(config: CommonSchemaType): ComponentType | null {
     children = _createComponent(config.body);
     if (children instanceof Array && config.space) {
       const space = factory.get('space');
-      console.log('space:', space);
+      console.log(space);
       const props = config.space === true ? {} : config.space;
       children = <space {...props}>{children}</space>;
     }
@@ -64,10 +63,12 @@ function _createComponent(config: CommonSchemaType): ComponentType | null {
     </comp>
   );
 }
-export default function builder(config: any): Component | null {
+function builder(config: any): Component | null {
   const root = _createComponent(config);
   if (root instanceof Array) {
     return <div>{root}</div>;
   }
   return root;
 }
+
+export { builder };
