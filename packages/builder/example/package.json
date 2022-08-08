@@ -1,0 +1,27 @@
+{
+  "name": "epiphyllum",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "amis": "^2.0.0-rc.20",
+    "electron-rebuild": "^3.2.8",
+    "element-plus": "^2.2.6",
+    "ffi-napi": "^4.0.3",
+    "vue": "^3.2.25",
+    "vue-json-viewer": "3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vue-tsc": "^0.34.7"
+  }
+}

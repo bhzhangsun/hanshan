@@ -30,7 +30,7 @@ module.exports = {
   overrides: [
     // global config file
     {
-      files: ['*.js', 'packages/codestyle/**', 'packages/**/lib'],
+      files: ['*.js', 'packages/codestyle/**', 'packages/**/lib', 'packages/**/example/**'],
       rules: {
         'no-restricted-globals': 'off'
       }
